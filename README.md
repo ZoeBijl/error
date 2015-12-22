@@ -50,7 +50,7 @@ We can also invert this markup:
 ```
 <ul>
   <li><error for="firstname">First names cannot contain spaces, because we hate you, Mary Lou.</error></li>
-  <li><error for="lastname">Last names need to at least five characters long, so suck it Mr. Bijl.</error></li>
+  <li><error for="lastname">Last names need to be at least five characters long, so suck it Mr. Bijl.</error></li>
 </ul>
 ```
 

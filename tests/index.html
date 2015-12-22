@@ -10,15 +10,23 @@
       <h1>How to handle and display errors for user input?</h1>
 
       <section>
-        <h2>Test 1</h2>
+        <h2>Test 1: <code>setCustomValidity</code></h2>
 
         <form action="#">
           <input type="text"
             id="username"
             name="username"
             placeholder="Only letters are allowed"
-            pattern="[a-z][A-Z]{3,15}">
+            pattern="[a-z][A-Z][]{1,15}">
         </form>
+
+        <script>
+          var testOneInput = document.getElementById('username');
+          testOneInput.oninvalid = function(event) {
+            // This text be taken from another element (as to not have it in JS)
+            event.target.setCustomValidity('Username should only contain letters. e.g. Soren');
+          }
+        </script>
 
         <h3>Results</h3>
         <table>

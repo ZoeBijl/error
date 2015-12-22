@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>The error element</title>
+  <link href="core.css" rel="stylesheet" type="text/css">
+  <link href="http://www.w3.org/StyleSheets/TR/w3c-unofficial.css" rel="stylesheet" type="text/css">
+</head>
+<body class="split chapter">
+  <h4 id="the-label-element"><span class="secno"></span>The <dfn><code>error</code></dfn> element</h4>
+  <dl class="element"><dt><a href="dom.html#element-dfn-categories">Categories</a>:</dt>
+   <dd><a href="dom.html#flow-content-1">Flow content</a>.</dd>
+   <dd><a href="dom.html#phrasing-content-1">Phrasing content</a>.</dd>
+   <dd><a href="dom.html#interactive-content-0">Interactive content</a>.</dd>
+   <dd><a href="#category-form-attr">Reassociateable</a> <a href="#form-associated-element">form-associated element</a>.</dd>
+   <dd><a href="dom.html#palpable-content-0">Palpable content</a>.</dd>
+   <dt><a href="dom.html#element-dfn-contexts">Contexts in which this element can be used</a>:</dt>
+   <dd>Where <a href="dom.html#phrasing-content-1">phrasing content</a> is expected.</dd>
+   <dt><a href="dom.html#element-dfn-content-model">Content model</a>:</dt>
+   <dd><a href="dom.html#phrasing-content-1">Phrasing content</a>, but with no descendant <a href="#category-label">labelable elements</a> unless it is the element's <a href="#labeled-control">labeled control</a>, and no descendant <code><a href="#the-error-element">error</a></code> elements.</dd>
+   <dt><a href="dom.html#element-dfn-attributes">Content attributes</a>:</dt>
+   <dd><a href="dom.html#global-attributes">Global attributes</a></dd>
+   <dd><code><a href="#attr-fae-form">form</a></code> - Associates the control with a <code><a href="#the-form-element">form</a></code> element</dd>
+   <dd><code><a href="#attr-error-for">for</a></code> - Associate the label with form control</dd>
+   <dt><span>Tag omission in text/html</span>:</dt>
+   <dd>Neither tag is omissable</dd>
+    <dt>Allowed <a href="dom.html#aria-role-attribute">ARIA role attribute</a> values:</dt>
+    <dd><code>error</code> (default - <a href="http://www.w3.org/TR/html5/dom.html#aria-usage-note">do not set</a>)</dd>
+    <dt>Allowed <a href="dom.html#state-and-property-attributes">ARIA state and property attributes</a>:</dt>
+    <dd><a href="dom.html#index-aria-global">Global aria-* attributes</a></dd>
+   <dt><a href="dom.html#element-dfn-dom">DOM interface</a>:</dt><!--TOPIC:DOM APIs-->
+   <dd>
+<pre class="idl">interface <dfn id="htmllabelelement">HTMLErrorElement</dfn> : <a href="dom.html#htmlelement">HTMLElement</a> {
+  readonly attribute <a href="#htmlformelement">HTMLFormElement</a>? <a href="#dom-fae-form">form</a>;
+           attribute DOMString <a href="#dom-label-htmlfor">htmlFor</a>;
+  readonly attribute <a href="dom.html#htmlelement">HTMLElement</a>? <a href="#dom-label-control">control</a>;
+};</pre>
+   </dd>
+  </dl>
+  <p>The <code>error</code> element represents an error message. The error can be associated with a specific control by using the <a href="#attr-error-for">for</a> attribute.</p>
+  <div class="example">
+
+   <p>The following example shows an invalid form control which is labelled with an <code>error</code> element.</p>
+
+   <pre>
+&lt;label for="username"&gt;Username&lt;/label&gt;
+&lt;input type="text"
+  id="username"
+  name="username"
+  placeholder="Lowercase only, e.g.: soren"
+  pattern="[a-z]{3,15}"&gt;
+&lt;error for="username"&gt;Username should only contain lowercase letters. e.g. soren&lt;/error&gt;
+   </pre>
+
+  </div>
+</body>
+</html>

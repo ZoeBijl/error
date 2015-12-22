@@ -1,5 +1,7 @@
 # How to handle and display errors for user input?
 
+What are the different ways to communicate error messages (to all users)? [Tests are located in `index.html`](https://cdn.rawgit.com/ZoeBijl/error/master/tests/index.html).
+
 ## Resources
 
 * [Form validation with the pattern attribute](http://webdesign.tutsplus.com/tutorials/html5-form-validation-with-the-pattern-attribute--cms-25145)

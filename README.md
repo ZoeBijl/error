@@ -45,6 +45,14 @@ If we also allow other markup—like `blockquote`:
 </errror>
 ```
 
+We can also invert this markup:
+
+```
+<ul>
+  <li><error for="firstname">First names cannot contain spaces, because we hate you, Mary Lou.</error></li>
+  <li><error for="lastname">Last names need to at least five characters long, so suck it Mr. Bijl.</error></li>
+</ul>
+```
 
 ### Resources
 

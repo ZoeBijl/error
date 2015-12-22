@@ -15,6 +15,7 @@ What are the different ways to communicate error messages (to all users)? [Tests
 * [Live validation with CSS by Hugo Giraudel](http://codepen.io/HugoGiraudel/pen/b3274eb0bf93bed79afeafd30b7a33f1)
 * [WAI Tutorials: Forms: User Notifications](http://www.w3.org/WAI/tutorials/forms/notifications/)
 * [What is best practice for designing form error messages?](http://ux.stackexchange.com/questions/26173/what-is-best-practice-for-designing-form-error-messages)
+* [Validation styling by Jonathan Kingston](http://discourse.wicg.io/t/validation-styling/800)
 
 ## The `error` element
 

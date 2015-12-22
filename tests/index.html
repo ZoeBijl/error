@@ -8,6 +8,7 @@
   <body>
     <main>
       <h1>How to handle and display errors for user input?</h1>
+      <p>Warning: this document contains unfinished and untested code. You can <a href="https://github.com/ZoeBijl/error">help out via GitHub</a>.</p>
 
       <article>
         <h2>Test 1: Custom message with <code>setCustomValidity</code></h2>
@@ -110,6 +111,40 @@
         <ul>
           <li><a href="http://www.w3.org/TR/html5/forms.html#the-output-element"><code>output</code> element</a></li>
           <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/ValidityState">ValidityState on MDN</a></li>
+        </ul>
+      </article>
+
+      <article>
+        <h2>Test 4: <code>aria-describedby</code></h2>
+
+        <form action="#" novalidate id="form-test4">
+          <label for="username">Username</label>
+          <input type="text"
+            id="username-test4"
+            name="username"
+            placeholder="Lowercase only, e.g.: soren"
+            pattern="[a-z]{3,15}"
+            aria-describedby="error-test4">
+          <p id="error-test4" aria-live="assertive" hidden>Username should only contain lowercase letters. e.g. soren</p>
+        </form>
+
+        <script>
+          var formTest4 = document.getElementById('form-test4');
+          var inputTest4 = document.getElementById('username-test4');
+          var errorTest4 = document.getElementById('error-test4');
+
+          inputTest4.addEventListener('invalid', function(event){
+            event.preventDefault();
+            if (!event.target.validity.valid) {
+              errorTest4.removeAttribute('hidden');
+              inputTest4.setAttribute('invalid', '');
+            }
+          });
+        </script>
+
+        <h3>Resources</h3>
+        <ul>
+          <li><a href="http://www.w3.org/TR/wai-aria-1.1/#aria-describedby">WAI-ARIA 1.1: <code>aria-describedby</code> (property)</a></li>
         </ul>
       </article>
     </main>

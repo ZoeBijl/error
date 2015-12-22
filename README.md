@@ -54,6 +54,15 @@ We can also display all errors as a list:
 </ul>
 ```
 
+Link it to a form:
+
+```
+<form id="whisky">
+  ...
+</form>
+<error form="whisky">The server rejected your order because you only ordered one bottle. Order at least two.</error>
+```
+
 ### Resources
 
 * []

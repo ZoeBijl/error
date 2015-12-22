@@ -1,6 +1,6 @@
 # How to handle and display errors for user input?
 
-What are the different ways to communicate error messages (to all users)? [Tests are located in `index.html`](https://cdn.rawgit.com/ZoeBijl/error/master/tests/index.html).
+What are the different ways to communicate error messages (to all users)? [Tests are located in `index.html`](https://rawgit.com/ZoeBijl/error/master/tests/index.html).
 
 ## Resources
 

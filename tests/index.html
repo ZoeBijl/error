@@ -13,18 +13,19 @@
         <h2>Test 1: <code>setCustomValidity</code></h2>
 
         <form action="#">
+          <label for="username">Username</label>
           <input type="text"
             id="username"
             name="username"
-            placeholder="Only letters are allowed"
-            pattern="[a-z][A-Z][]{1,15}">
+            placeholder="Lowercase only, e.g.: soren"
+            pattern="[a-z]{3,15}">
         </form>
 
         <script>
           var testOneInput = document.getElementById('username');
           testOneInput.oninvalid = function(event) {
             // This text be taken from another element (as to not have it in JS)
-            event.target.setCustomValidity('Username should only contain letters. e.g. Soren');
+            event.target.setCustomValidity('Username should only contain lowercase letters. e.g. soren');
           }
         </script>
 

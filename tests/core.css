@@ -118,10 +118,26 @@ tr:nth-child(even) td {
   clip: rect(0, 0, 0, 0);
 }
 
-[href="#github"] {
-  font-size: 2em;
+input {
+  padding: 0.5em 1em;
+  min-width: 15em;
+  border: 2px solid #444;
+  font-size: inherit;
 }
 
-.fa-heart {
-  color: hsl(2, 100%, 61%);
+input:focus {
+  outline: none;
+  border-color: royalblue;
+}
+
+input:invalid {
+  border-color: darkred;
+}
+
+input:focus:valid {
+  border-color: seagreen;
+}
+
+label {
+  display: block;
 }

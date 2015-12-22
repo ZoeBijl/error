@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>How to handle and display errors for user input?</title>
+    <link rel="stylesheet" href="core.css">
+  </head>
+  <body>
+    <main>
+      <h1>How to handle and display errors for user input?</h1>
+
+      <section>
+        <h2>Test 1</h2>
+
+        <form action="#">
+          <input type="text"
+            id="username"
+            name="username"
+            placeholder="Only letters are allowed"
+            pattern="[a-z][A-Z]{3,15}">
+        </form>
+
+        <h3>Results</h3>
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">AT, Browser, OS</th>
+              <th scope="col">Shows error message</th>
+              <th scope="col">Announces error message</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">VoiceOver, Safari 9, OS X 10.10</th>
+              <td class="fail">No</td>
+              <td class="fail">No</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+  </body>
+</html>

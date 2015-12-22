@@ -141,3 +141,11 @@ input:focus:valid {
 label {
   display: block;
 }
+
+output {
+  display: block;
+}
+
+output[hidden] {
+  display: none;
+}

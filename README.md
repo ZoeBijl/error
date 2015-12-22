@@ -12,6 +12,7 @@ What are the different ways to communicate error messages (to all users)? [Tests
 * [`input` element](http://www.w3.org/TR/html5/forms.html#the-input-element)
 * [`output` element](http://www.w3.org/TR/html5/forms.html#the-output-element)
 * [Common `input` element attributes](http://www.w3.org/TR/html5/forms.html#common-input-element-attributes)
+* [Live validation with CSS by Hugo Giraudel](http://codepen.io/HugoGiraudel/pen/b3274eb0bf93bed79afeafd30b7a33f1)
 
 ## The `error` element
 

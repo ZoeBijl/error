@@ -10,7 +10,7 @@
       <h1>How to handle and display errors for user input?</h1>
 
       <article>
-        <h2>Test 1: <code>setCustomValidity</code></h2>
+        <h2>Test 1: Custom message with <code>setCustomValidity</code></h2>
 
         <form action="#">
           <label for="username">Username</label>
@@ -52,12 +52,9 @@
       </article>
 
       <article>
-        <h2>Test 2: <code>novalidate</code></h2>
-        <p>In order to customise any validation messages we need to disable the default validation bubbles. We can then check validity of the form with <code>checkValidity</code>. See these resources:</p>
-        <ul>
-          <li><a href="https://code.google.com/p/chromium/issues/detail?id=259050#c9">tkent on <code>::-webkit-validation-bubble</code> stopped working in Chrome Blink</a></li>
-          <li><a href="http://www.w3.org/TR/html5/forms.html#attr-fs-novalidate">4.10.19.6 Form submission: <code>novalidate</code></a></li>
-        </ul>
+        <h2>Test 2: Custom message style with <code>novalidate</code></h2>
+        <p>In order to customise any validation messages we need to disable the default validation bubbles. We can then check validity of the form with <code>checkValidity</code>.</p>
+
         <p>NOTE: There is no scripting behind this as of yet.</p>
 
         <form action="#" novalidate>
@@ -69,15 +66,31 @@
             pattern="[a-z]{3,15}">
         </form>
 
-        <!-- <script>
-          var testOneInput = document.getElementById('username');
-          testOneInput.oninvalid = function(event) {
-            console.log('Test 1 Event:', event);
+        <h3>Resources</h3>
+        <ul>
+          <li><a href="https://code.google.com/p/chromium/issues/detail?id=259050#c9">tkent on <code>::-webkit-validation-bubble</code> stopped working in Chrome Blink</a></li>
+          <li><a href="http://www.w3.org/TR/html5/forms.html#attr-fs-novalidate">4.10.19.6 Form submission: <code>novalidate</code></a></li>
+        </ul>
+      </article>
 
-            // This text be taken from another element (as to not have it in JS)
-            event.target.setCustomValidity('Username should only contain lowercase letters. e.g. soren');
-          }
-        </script> -->
+      <article>
+        <h2>Test 3: <code>output</code> element</h2>
+        <p>NOTE: There is no scripting behind this as of yet.</p>
+
+        <form action="#" novalidate>
+          <label for="username">Username</label>
+          <input type="text"
+            id="username"
+            name="username"
+            placeholder="Lowercase only, e.g.: soren"
+            pattern="[a-z]{3,15}">
+          <output for="username" aria-live="polite">Username should only contain lowercase letters. e.g. soren</output>
+        </form>
+
+        <h3>Resources</h3>
+        <ul>
+          <li><a href="http://www.w3.org/TR/html5/forms.html#the-output-element"><code>output</code> element</a></li>
+        </ul>
       </article>
     </main>
   </body>

@@ -45,7 +45,7 @@ If we also allow other markup—like `blockquote`:
 </errror>
 ```
 
-We can also invert this markup:
+We can also display all errors as a list:
 
 ```
 <ul>

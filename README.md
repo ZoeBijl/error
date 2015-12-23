@@ -70,3 +70,5 @@ Link it to a form:
 ### Resources
 
 * [W3C HTML Wiki: Extension How To](http://www.w3.org/html/wg/wiki/ExtensionHowTo)
+* [Rationale and use cases for standardizing a 'main content' HTML feature](http://www.w3.org/html/wg/wiki/User:Sfaulkne/main-usecases#Introduction)
+* [W3C HTML Wiki: Change Proposals](http://www.w3.org/html/wg/wiki/ChangeProposals)

@@ -69,4 +69,4 @@ Link it to a form:
 
 ### Resources
 
-* []
+* [W3C HTML Wiki: Extension How To](http://www.w3.org/html/wg/wiki/ExtensionHowTo)
